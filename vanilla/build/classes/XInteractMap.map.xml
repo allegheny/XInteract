@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map project-version="2.0">
+	<property name="defaultPackage" value="cayenne.DBobjects"/>
+	<property name="defaultClientPackage" value="cayenne.DBobjects"/>
+	<db-entity name="ASSIGNMENT">
+		<db-attribute name="CLASS_ID" type="INTEGER" isMandatory="true"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="PROBLEM_ID" type="INTEGER" isMandatory="true"/>
+	</db-entity>
+	<db-entity name="ATTEMPT">
+		<db-attribute name="CAUSE" type="LONGVARCHAR" isMandatory="true"/>
+		<db-attribute name="DATE" type="TIMESTAMP" isMandatory="true"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="PROBLEM_ID" type="INTEGER" isMandatory="true"/>
+		<db-attribute name="STUDENT_CODE" type="LONGVARCHAR" isMandatory="true"/>
+		<db-attribute name="STUDENT_ID" type="INTEGER" isMandatory="true"/>
+	</db-entity>
+	<db-entity name="CATEGORY">
+		<db-attribute name="DESCRIPTION" type="LONGVARCHAR" isMandatory="true" length="10000"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="NAME" type="VARCHAR" isMandatory="true" length="200"/>
+	</db-entity>
+	<db-entity name="CLASS">
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="PROFESSOR_ID" type="INTEGER" isMandatory="true"/>
+		<db-attribute name="SEMESTER" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="TITLE" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="YEAR_TAUGHT" type="INTEGER" isMandatory="true"/>
+	</db-entity>
+	<db-entity name="ENROLLMENT">
+		<db-attribute name="CLASS_ID" type="INTEGER" isMandatory="true"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="STUDENT_ID" type="INTEGER" isMandatory="true"/>
+	</db-entity>
+	<db-entity name="PROBLEM">
+		<db-attribute name="CATEGORY_ID" type="INTEGER" isMandatory="true"/>
+		<db-attribute name="CODE" type="LONGVARCHAR" isMandatory="true" length="10000"/>
+		<db-attribute name="DESCRIPTION" type="LONGVARCHAR" isMandatory="true" length="10000"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="INPUT_DATA" type="LONGVARCHAR" length="10000"/>
+		<db-attribute name="NAME" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="OUTPUT_DATA" type="LONGVARCHAR" length="10000"/>
+		<db-attribute name="PROFESSOR_ID" type="INTEGER" isMandatory="true"/>
+	</db-entity>
+	<db-entity name="PROFESSOR">
+		<db-attribute name="FIRST_NAME" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="LAST_NAME" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="PASSWORD" type="VARCHAR" isMandatory="true" length="20"/>
+		<db-attribute name="USER_NAME" type="VARCHAR" isMandatory="true" length="20"/>
+	</db-entity>
+	<db-entity name="STUDENT">
+		<db-attribute name="FIRST_NAME" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="LAST_NAME" type="VARCHAR" isMandatory="true" length="200"/>
+		<db-attribute name="PASSWORD" type="VARCHAR" isMandatory="true" length="20"/>
+		<db-attribute name="USER_NAME" type="VARCHAR" isMandatory="true" length="20"/>
+	</db-entity>
+	<obj-entity name="Attempt" className="cayenne.DBobjects.Attempt" clientClassName="cayenne.DBobjects.Attempt" dbEntityName="ATTEMPT">
+		<obj-attribute name="cause" type="java.lang.String" db-attribute-path="CAUSE"/>
+		<obj-attribute name="date" type="java.util.Date" db-attribute-path="DATE"/>
+		<obj-attribute name="studentCode" type="java.lang.String" db-attribute-path="STUDENT_CODE"/>
+	</obj-entity>
+	<obj-entity name="Category" className="cayenne.DBobjects.Category" clientClassName="cayenne.DBobjects.Category" dbEntityName="CATEGORY">
+		<obj-attribute name="description" type="java.lang.String" db-attribute-path="DESCRIPTION"/>
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="NAME"/>
+	</obj-entity>
+	<obj-entity name="Class" className="cayenne.DBobjects.Class" clientClassName="cayenne.DBobjects.Class" dbEntityName="CLASS">
+		<obj-attribute name="semester" type="java.lang.String" db-attribute-path="SEMESTER"/>
+		<obj-attribute name="title" type="java.lang.String" db-attribute-path="TITLE"/>
+		<obj-attribute name="yearTaught" type="java.lang.Integer" db-attribute-path="YEAR_TAUGHT"/>
+	</obj-entity>
+	<obj-entity name="Problem" className="cayenne.DBobjects.Problem" clientClassName="cayenne.DBobjects.Problem" dbEntityName="PROBLEM">
+		<obj-attribute name="code" type="java.lang.String" db-attribute-path="CODE"/>
+		<obj-attribute name="description" type="java.lang.String" db-attribute-path="DESCRIPTION"/>
+		<obj-attribute name="inputData" type="java.lang.String" db-attribute-path="INPUT_DATA"/>
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="NAME"/>
+		<obj-attribute name="outputData" type="java.lang.String" db-attribute-path="OUTPUT_DATA"/>
+	</obj-entity>
+	<obj-entity name="Professor" className="cayenne.DBobjects.Professor" clientClassName="cayenne.DBobjects.Professor" dbEntityName="PROFESSOR">
+		<obj-attribute name="firstName" type="java.lang.String" db-attribute-path="FIRST_NAME"/>
+		<obj-attribute name="lastName" type="java.lang.String" db-attribute-path="LAST_NAME"/>
+		<obj-attribute name="password" type="java.lang.String" db-attribute-path="PASSWORD"/>
+		<obj-attribute name="userName" type="java.lang.String" db-attribute-path="USER_NAME"/>
+	</obj-entity>
+	<obj-entity name="Student" className="cayenne.DBobjects.Student" clientClassName="cayenne.DBobjects.Student" dbEntityName="STUDENT">
+		<obj-attribute name="firstName" type="java.lang.String" db-attribute-path="FIRST_NAME"/>
+		<obj-attribute name="lastName" type="java.lang.String" db-attribute-path="LAST_NAME"/>
+		<obj-attribute name="password" type="java.lang.String" db-attribute-path="PASSWORD"/>
+		<obj-attribute name="userName" type="java.lang.String" db-attribute-path="USER_NAME"/>
+	</obj-entity>
+	<db-relationship name="CLASS" source="ASSIGNMENT" target="CLASS" toMany="false">
+		<db-attribute-pair source="CLASS_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="PROBLEM" source="ASSIGNMENT" target="PROBLEM" toMany="false">
+		<db-attribute-pair source="PROBLEM_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="PROBLEM" source="ATTEMPT" target="PROBLEM" toMany="false">
+		<db-attribute-pair source="PROBLEM_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="STUDENT" source="ATTEMPT" target="STUDENT" toMany="false">
+		<db-attribute-pair source="STUDENT_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="PROBLEMS" source="CATEGORY" target="PROBLEM" toMany="true">
+		<db-attribute-pair source="ID" target="CATEGORY_ID"/>
+	</db-relationship>
+	<db-relationship name="ASSIGNMENTS" source="CLASS" target="ASSIGNMENT" toMany="true">
+		<db-attribute-pair source="ID" target="CLASS_ID"/>
+	</db-relationship>
+	<db-relationship name="PROFESSOR" source="CLASS" target="PROFESSOR" toMany="false">
+		<db-attribute-pair source="PROFESSOR_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="STUDENTS" source="CLASS" target="ENROLLMENT" toMany="true">
+		<db-attribute-pair source="ID" target="CLASS_ID"/>
+	</db-relationship>
+	<db-relationship name="ENROLLMENT" source="ENROLLMENT" target="CLASS" toMany="false">
+		<db-attribute-pair source="CLASS_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="STUDENT" source="ENROLLMENT" target="STUDENT" toMany="false">
+		<db-attribute-pair source="STUDENT_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="ASSIGNMENTS" source="PROBLEM" target="ASSIGNMENT" toMany="true">
+		<db-attribute-pair source="ID" target="PROBLEM_ID"/>
+	</db-relationship>
+	<db-relationship name="ATTEMPT" source="PROBLEM" target="ATTEMPT" toMany="true">
+		<db-attribute-pair source="ID" target="PROBLEM_ID"/>
+	</db-relationship>
+	<db-relationship name="AUTHOR" source="PROBLEM" target="PROFESSOR" toMany="false">
+		<db-attribute-pair source="PROFESSOR_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="CATEGORY" source="PROBLEM" target="CATEGORY" toMany="false">
+		<db-attribute-pair source="CATEGORY_ID" target="ID"/>
+	</db-relationship>
+	<db-relationship name="CLASSES" source="PROFESSOR" target="CLASS" toMany="true">
+		<db-attribute-pair source="ID" target="PROFESSOR_ID"/>
+	</db-relationship>
+	<db-relationship name="PROBLEMS" source="PROFESSOR" target="PROBLEM" toMany="true">
+		<db-attribute-pair source="ID" target="PROFESSOR_ID"/>
+	</db-relationship>
+	<db-relationship name="ENROLLMENT" source="STUDENT" target="ENROLLMENT" toMany="true">
+		<db-attribute-pair source="ID" target="STUDENT_ID"/>
+	</db-relationship>
+	<db-relationship name="HISTORY" source="STUDENT" target="ATTEMPT" toMany="true">
+		<db-attribute-pair source="ID" target="STUDENT_ID"/>
+	</db-relationship>
+	<obj-relationship name="problem" source="Attempt" target="Problem" deleteRule="Nullify" db-relationship-path="PROBLEM"/>
+	<obj-relationship name="student" source="Attempt" target="Student" deleteRule="Nullify" db-relationship-path="STUDENT"/>
+	<obj-relationship name="problems" source="Category" target="Problem" deleteRule="Deny" db-relationship-path="PROBLEMS"/>
+	<obj-relationship name="problems" source="Class" target="Problem" deleteRule="Nullify" db-relationship-path="ASSIGNMENTS.PROBLEM"/>
+	<obj-relationship name="professor" source="Class" target="Professor" deleteRule="Nullify" db-relationship-path="PROFESSOR"/>
+	<obj-relationship name="students" source="Class" target="Student" deleteRule="Nullify" db-relationship-path="STUDENTS.STUDENT"/>
+	<obj-relationship name="attempt" source="Problem" target="Attempt" deleteRule="Cascade" db-relationship-path="ATTEMPT"/>
+	<obj-relationship name="author" source="Problem" target="Professor" deleteRule="Nullify" db-relationship-path="AUTHOR"/>
+	<obj-relationship name="category" source="Problem" target="Category" deleteRule="Nullify" db-relationship-path="CATEGORY"/>
+	<obj-relationship name="classes" source="Problem" target="Class" deleteRule="Deny" db-relationship-path="ASSIGNMENTS.CLASS"/>
+	<obj-relationship name="classes" source="Professor" target="Class" deleteRule="Deny" db-relationship-path="CLASSES"/>
+	<obj-relationship name="problems" source="Professor" target="Problem" deleteRule="Deny" db-relationship-path="PROBLEMS"/>
+	<obj-relationship name="enrollment" source="Student" target="Class" deleteRule="Deny" db-relationship-path="ENROLLMENT.ENROLLMENT"/>
+	<obj-relationship name="history" source="Student" target="Attempt" deleteRule="Cascade" db-relationship-path="HISTORY"/>
+	<query name="DeleteAll" factory="org.apache.cayenne.map.SQLTemplateBuilder" root="data-map" root-name="XInteractMap">
+		<property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+		<sql><![CDATA[delete from $table]]></sql>
+	</query>
+</data-map>
