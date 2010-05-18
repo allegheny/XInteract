@@ -1,5 +1,0 @@
-.		.		.		aldenv106
-aldenv104	aldenv105	.		aldenv107
-.		.		aldenv108	.
-aldenv103	aldenv102	.		aldenv100
-.		.		.		aldenv101

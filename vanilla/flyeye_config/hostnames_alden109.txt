@@ -1,5 +1,0 @@
-aldenv147.allegheny.edu	aldenv148.allegheny.edu	aldenv126.allegheny.edu	aldenv149.allegheny.edu
-aldenv141.allegheny.edu	aldenv61.allegheny.edu	aldenv125.allegheny.edu	aldenv3.allegheny.edu
-aldenv139.allegheny.edu	aldenv138.allegheny.edu	aldenv23.allegheny.edu	aldenv127.allegheny.edu
-aldenv137.allegheny.edu	aldenv136.allegheny.edu	aldenv128.allegheny.edu	aldenv26.allegheny.edu
-aldenv134.allegheny.edu	aldenv135.allegheny.edu	.		.

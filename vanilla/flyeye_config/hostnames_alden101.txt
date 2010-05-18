@@ -1,5 +1,0 @@
-aldenv174	aldenv173	aldenv172	aldenv171	aldenv167	aldenv168	aldenv169	.
-.		.		aldenv177	aldenv178	aldenv166	aldenv165	aldenv164	.
-aldenv182	aldenv181	.		aldenv179	aldenv159	aldenv160	.		aldenv162
-aldenv123	aldenv184	aldenv185	aldenv186	aldenv158	aldenv157	aldenv156	aldenv155
-aldenv122	aldenv189	aldenv188	.		.		.		aldenv153	aldenv154
