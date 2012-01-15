@@ -2,6 +2,10 @@ package cayenne.DBobjects;
 
 import cayenne.DBobjects.auto._Professor;
 
+/**
+ *
+ * @author Radu Creanga <rdcrng@gmail.com>
+ */
 public class Professor extends _Professor implements Comparable<Professor> {
 
     private boolean sentinel = false;

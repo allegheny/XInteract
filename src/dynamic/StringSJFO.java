@@ -5,7 +5,7 @@ import javax.tools.SimpleJavaFileObject;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class StringSJFO extends SimpleJavaFileObject {
            final String source;

@@ -27,7 +27,7 @@ import xidb.convert.StudentEnrollmentConverter;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class XIntShell extends javax.swing.JFrame {
 

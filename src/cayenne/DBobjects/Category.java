@@ -2,6 +2,10 @@ package cayenne.DBobjects;
 
 import cayenne.DBobjects.auto._Category;
 
+/**
+ *
+ * @author Radu Creanga <rdcrng@gmail.com>
+ */
 public class Category extends _Category implements Comparable<Category> {
 
     private boolean sentinel = false;

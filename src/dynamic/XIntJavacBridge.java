@@ -9,7 +9,7 @@ import javax.tools.ToolProvider;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class XIntJavacBridge {
 

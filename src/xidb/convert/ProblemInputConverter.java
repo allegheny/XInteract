@@ -5,7 +5,7 @@ import org.jdesktop.beansbinding.Converter;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class ProblemInputConverter extends Converter {
 

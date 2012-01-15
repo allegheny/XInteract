@@ -8,7 +8,7 @@ import javax.tools.JavaFileObject;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class XIntClassLoader extends ClassLoader {
 

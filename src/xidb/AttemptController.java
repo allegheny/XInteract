@@ -11,7 +11,7 @@ import java.util.Vector;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class AttemptController implements Serializable {
 
