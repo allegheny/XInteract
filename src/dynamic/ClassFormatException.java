@@ -2,7 +2,7 @@ package dynamic;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class ClassFormatException extends Exception {
 

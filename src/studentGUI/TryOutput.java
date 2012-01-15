@@ -9,7 +9,7 @@ import cayenne.DBobjects.Problem;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class TryOutput extends javax.swing.JDialog {
 

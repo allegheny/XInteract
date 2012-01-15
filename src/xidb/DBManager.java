@@ -15,7 +15,7 @@ import professorGUI.LogInCondition;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class DBManager implements Serializable {
 

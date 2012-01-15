@@ -4,7 +4,7 @@ import java.beans.*;
 
 /**
  *
- * @author radu
+ * @author Radu Creanga <rdcrng@gmail.com>
  */
 public class DBManagerBeanInfo extends SimpleBeanInfo {
 
